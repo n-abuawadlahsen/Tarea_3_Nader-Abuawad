@@ -1,0 +1,76 @@
+/* Variables dinámicas según nivel */
+#game {
+  display: grid;
+  grid-template-rows: repeat(var(--rows), 40px);
+  grid-template-columns: repeat(var(--cols), 40px);
+  gap: 4px;
+  padding: 8px;
+  margin: 16px auto;
+  max-width: calc(var(--cols) * 40px + (var(--cols) - 1) * 4px + 16px);
+  background: #eee;
+  border-radius: 8px;
+}
+
+/* Cada ficha */
+.cell {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+.cell:active {
+  transform: scale(0.9);
+}
+
+/* Colores de fichas (ajusta colores a tu gusto) */
+.bg-0 { background: #f44336; }  /* rojo */
+.bg-1 { background: #2196f3; }  /* azul */
+.bg-2 { background: #ffeb3b; }  /* amarillo */
+.bg-3 { background: #4caf50; }  /* verde */
+.bg-4 { background: #9c27b0; }  /* morado */
+.bg-5 { background: #ff9800; }  /* naranja */
+
+/* Contenedor de información */
+header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  background: #444;
+  color: #fff;
+}
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+#info span {
+  margin-right: 12px;
+  font-weight: bold;
+}
+#restart {
+  padding: 4px 8px;
+  border: none;
+  border-radius: 4px;
+  background: #fff;
+  color: #444;
+  cursor: pointer;
+}
+#restart:hover {
+  background: #ddd;
+}
+
+/* Selector de nivel */
+#level-selector {
+  display: flex;
+  align-items: center;
+}
+#level-selector label {
+  margin-right: 4px;
+}
+#level {
+  padding: 4px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
