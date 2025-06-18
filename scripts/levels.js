@@ -45,10 +45,3 @@ export function getLevelConfig(name) {
   return LEVELS.find(l => l.name === name);
 }
 
-export function isPointsObjective(level) {
-  return level.objectiveType === 'points';
-}
-
-export function isPiecesObjective(level) {
-  return level.objectiveType === 'pieces';
-}
